@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Java Validation Form</title>
+<style>
+    body{
+        padding: 50px 300px;
+       <!-- background-image: url(pexels-markusspiske-1089438.jpg)-->
+    }
+    formdesign{ 
+        font-size: 300px;
+        font-family: 'Times New Roman', Times, serif; 
+    }
+    .formdesign input{ 
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        padding: auto;
+        width: 30%;
+        border-color:2px, blue;
+        border-radius: 20px;
+        margin: 10px;
+    
+    }
+    .but{
+        font-size: 20px;
+        border-radius: 10px;
+        margin: 60px;  
+        width: 100px;
+        height: auto;
+               
+         }
+</style>
+</head>
+<body>
+    <h1>  welcome to the best form  </h1>
+    <form action="/myaction.php" name="myForm" onsubmit="return validateForm()" method="post" >
+         <div class="formdesign" id="name">
+            Name:<input type="text" name="fname"><b><span class="formerror"></span></b>
+         </div>
+    
+
+        <div class="formdesign" id="email">
+            Email:<input type="email" name="femail">
+         </div>
+
+         <div class="formdesign" id="phone">
+            Phone:<input type="phone" name="fphone">
+         </div>
+
+         <div class="formdesign" id="pass">
+            Password:<input type="password" name="fpass">
+         </div>
+
+         <div class="formdesign" id="name">
+            Confirm Password:<input type="password" name="fcpass">
+         </div>
+
+         <input class="but" type="button" value="Button">
+   </form>
+   <script>
+     function seterror(id,error){
+        //set error inside tag id
+     element=document.getElementById(id);
+     element.getElementsByClassName("formerror")[0].innerHTML=error;
+     }
+     function validateForm(){
+        var returnval =true;
+        //perform validation if validation is fail, set the validation  of return to false
+        var name=document.form['myForm']["fname"].value;
+        if(name.lenght<5){
+            seterron("name"."length is too short");
+            return val;
+        }
+
+     }
+   </script>
+   
+</body>
+</body>
+</html>
+

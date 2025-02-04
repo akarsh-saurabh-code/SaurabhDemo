@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Box with Click Event</title>
+    <script>
+        function =numberonly(input);
+		{
+		var num =/[^0-9]/gi;
+		input.value=input.value.replace(num,"");
+		}
+    </script>
+</head>
+<body>  
+
+    <label for="inputBox">Enter text (no special characters):</label>
+    <input type="text" id="inputBox" onkeyup="numberonly(this)" >
+ 
+</body>
+</html>
